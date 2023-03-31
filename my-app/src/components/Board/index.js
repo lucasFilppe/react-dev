@@ -10,11 +10,26 @@ export default function Board() {
   si e com seus pais. */
   const  [squares, setSquares] = useState(Array(9).fill(null));//Array(9).fill(null)cria uma matriz com nove elementos e define cada um deles como null
 
+  //estado para movimento do jpgo
+  const [xIsNext, setXIsNext] = useState(true);
+
   //função que atualiza quadrado
   function handleClick(i){
+
+    if(squares[i]){
+      return
+    }
+
     const nextSquares = squares.slice();
-    nextSquares[i] = "X"
+
+    if(xIsNext){
+      nextSquares[i] = "X"
+    }
+    else{
+      nextSquares[i] = "O"
+    }
     setSquares(nextSquares)
+    setXIsNext(!xIsNext)
   }
 
   return (
