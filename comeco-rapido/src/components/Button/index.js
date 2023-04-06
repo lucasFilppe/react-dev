@@ -1,15 +1,10 @@
-import {useState} from 'react';
 
-function Button(){
-  const [count, setCount] = useState(0)
 
-  function handleClick(){
-    setCount(count + 1)
-  }
+function Button({count, onClick}){
 
   return(
     <div>
-      <button onClick={handleClick}>Click me! {count}</button>
+      <button onClick={onClick}>Click me! {count}</button>
     </div>
   )
 }
