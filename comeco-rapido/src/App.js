@@ -1,5 +1,6 @@
 import Button from "./components/Button";
 import Profile from "./components/Profile";
+import ShoppingList from "./components/ShoppingList";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>Começando com React</h1>
       <Button/>
       <Profile/>
+      <ShoppingList/>
     </div>
   );
 }
